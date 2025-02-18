@@ -51,9 +51,8 @@ return [
     | the application so that it's available within Artisan commands.
     |
     */
-
-    'url' => env('APP_URL', 'http://localhost'),
-
+'url' => env('APP_URL', 'https://glowing-cod-x559wq96vwwjcpgp9-8000.app.github.dev'),
+'asset_url' => env('ASSET_URL', 'https://glowing-cod-x559wq96vwwjcpgp9-8000.app.github.dev'),
     /*
     |--------------------------------------------------------------------------
     | Application Timezone
