@@ -67,4 +67,110 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 =======
 # football-ticket-booking
->>>>>>> 8963fd74ae6043ebc20b23c08c9aaac6f0adae95
+🎟️ Hệ Thống Đặt Vé Bóng Đá - Laravel Project
+📌 Giới Thiệu
+Hệ thống đặt vé bóng đá trực tuyến giúp người dùng dễ dàng lựa chọn khán đài, số lượng vé và thanh toán trực tuyến. Vé sẽ được xác thực bằng mã QR, giúp hạn chế tình trạng vé giả và mang đến trải nghiệm tốt hơn cho người hâm mộ.
+
+🚀 Công Nghệ Sử Dụng
+Backend: Laravel 10 (PHP 8.2)
+Frontend: Blade Template + Bootstrap
+Database: MySQL
+QR Code: SimpleSoftwareIO\QrCode
+Authentication: Laravel Auth (Sanctum hoặc Session-based)
+📂 Cấu Trúc Dự Án
+css
+Sao chép
+Chỉnh sửa
+/football-ticket-booking  
+│── app/  
+│   ├── Http/Controllers/ (Chứa các controller)  
+│   ├── Models/ (Chứa các model)  
+│── database/migrations/ (Chứa các file migration)  
+│── resources/views/  
+│   ├── layouts/ (Chứa layout chính)  
+│   ├── bookings/ (Chứa các file giao diện đặt vé)  
+│── routes/  
+│   ├── web.php (Khai báo route)  
+│── public/ (Chứa assets như CSS, JS, images)  
+│── .env (Cấu hình môi trường)  
+│── README.md (Tài liệu hướng dẫn)  
+🔧 Cài Đặt
+1️⃣ Clone Repository
+sh
+Sao chép
+Chỉnh sửa
+git clone https://github.com/your-repo/football-ticket-booking.git
+cd football-ticket-booking
+2️⃣ Cấu Hình Môi Trường
+Tạo tệp .env từ .env.example:
+
+sh
+Sao chép
+Chỉnh sửa
+cp .env.example .env
+Cập nhật thông tin kết nối database:
+
+ini
+Sao chép
+Chỉnh sửa
+DB_CONNECTION=mysql  
+DB_HOST=127.0.0.1  
+DB_PORT=3306  
+DB_DATABASE=football_tickets  
+DB_USERNAME=root  
+DB_PASSWORD=your_password  
+3️⃣ Cài Đặt Các Gói Composer
+sh
+Sao chép
+Chỉnh sửa
+composer install
+4️⃣ Chạy Migration
+sh
+Sao chép
+Chỉnh sửa
+php artisan migrate --seed
+5️⃣ Chạy Server Laravel
+sh
+Sao chép
+Chỉnh sửa
+php artisan serve
+Truy cập http://127.0.0.1:8000 để sử dụng ứng dụng.
+
+🎯 Các Chức Năng Chính
+✅ Đăng ký/Đăng nhập (Authentication)
+✅ Quản lý trận đấu (CRUD trận đấu, khán đài, vé)
+✅ Chọn vé & Đặt vé
+✅ Sinh mã QR Code cho vé
+✅ Giỏ hàng và Thanh toán
+✅ Bảo mật: Validation, CSRF, XSS, Session, Cookies
+
+📜 API Endpoint (Nếu có API)
+Phương thức	Endpoint	Mô tả
+POST	/api/login	Đăng nhập người dùng
+POST	/api/register	Đăng ký người dùng
+GET	/api/matches	Lấy danh sách trận đấu
+POST	/api/checkout	Thanh toán vé
+⚠️ Lỗi Thường Gặp
+1️⃣ Lỗi thiếu cột phone hoặc cccd trong bảng users
+👉 Chạy migration để cập nhật cột:
+
+sh
+Sao chép
+Chỉnh sửa
+php artisan migrate
+2️⃣ Không thể tạo mã QR (BaconQrCode\Exception\RuntimeException)
+👉 Cài đặt Imagick trong Codespaces:
+
+sh
+Sao chép
+Chỉnh sửa
+sudo apt-get install php-imagick
+composer require simplesoftwareio/simple-qrcode
+3️⃣ Lỗi “The GET method is not supported for route cart/checkout”
+👉 Kiểm tra route: Chỉ hỗ trợ POST, hãy gửi request bằng POST.
+
+📌 Đóng Góp
+Bạn có thể tạo Pull Request hoặc Issue trên GitHub nếu muốn đóng góp cải thiện dự án.
+
+📜 Giấy Phép
+Dự án này được phát hành dưới giấy phép MIT.
