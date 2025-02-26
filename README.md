@@ -99,7 +99,7 @@ Chỉnh sửa
 sh
 Sao chép
 Chỉnh sửa
-git clone https://github.com/your-repo/football-ticket-booking.git
+git clone https://github.com/lamk54a1/football-ticket-booking.git
 cd football-ticket-booking
 2️⃣ Cấu Hình Môi Trường
 Tạo tệp .env từ .env.example:
