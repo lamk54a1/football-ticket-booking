@@ -113,12 +113,14 @@ Cập nhật thông tin kết nối database:
 ini
 Sao chép
 Chỉnh sửa
-DB_CONNECTION=mysql  
-DB_HOST=127.0.0.1  
-DB_PORT=3306  
-DB_DATABASE=football_tickets  
-DB_USERNAME=root  
-DB_PASSWORD=your_password  
+DB_CONNECTION=mysql
+DB_HOST=mysql-2dc53ea6-st-7b5b.e.aivencloud.com
+DB_PORT=17355
+DB_DATABASE=defaultdb
+DB_USERNAME=avnadmin
+DB_PASSWORD=AVNS_90-Vdai_i2rGtm0PWZt
+DB_SSLMODE=REQUIRED
+
 3️⃣ Cài Đặt Các Gói Composer
 sh
 Sao chép
